@@ -138,8 +138,8 @@ args = get_config()
 head_label = [1, 2, 4, 6, 8, 9, 11, 12, 13, 15, 16, 17, 20]
 tail_label = [0, 3, 5, 7, 10, 14, 19,18]
 mcmfpp=MCMFPP(head_label, tail_label,weight1=args.W1, weight2=args.W2)
-classifier_SLFE=torch.load('save/model2.pth')
-classifier_CFEC=torch.load('save/model1.pth')
+classifier_SLFE=torch.load('save/model_SLFE.pth')
+classifier_CFEC=torch.load('save/model_CFEC.pth')
 test_loader=get_slfe_input(args)
 preds,reals=mcmfpp.predict(classifier_SLFE,classifier_CFEC,test_loader)
 score = evaluate(preds, reals, threshold=args.threshold)
