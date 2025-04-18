@@ -12,28 +12,43 @@ The supervised contrastive learning (SCL)  framework for knowledge distillation 
 ## Related Files
 ### MCMFPP
 
-| FILE NAME           | DESCRIPTION                                      |
-|:--------------------|:-------------------------------------------------|
-| preprocess.py       | Data preprocessing, encoding, and loading        |
-| models.py           | the main file of knowledge distillation          |
-| train_slfe.py       | Training of the Sub-classifier SLFE              |
-| train_cfec.py       | Training of the Sub-classifier CFEC              |
-| predict_MCMFPP.py   | Prediction with the Fusion Classifier MCMFPP     |
-| estimate.py         | evaluation metrics for prediction                |
-| utils.py            | Some functions that will be used during training |
-| Figures             | figures                                          |
-| MFTP                | dataset                                          |
-| save                | Save model weights and predictions               |
-| T-SNE               | T-SNE visualization                              |
-| requirements.txt    | Required packages for the environment            |
+| FILE NAME         | DESCRIPTION                                      |
+|:------------------|:-------------------------------------------------|
+| preprocess.py     | Data preprocessing, encoding, and loading        |
+| models.py         | models related to MCMFPP                         |
+| train_slfe.py     | Training of the Sub-classifier SLFE              |
+| train_cfec.py     | Training of the Sub-classifier CFEC              |
+| predict_MCMFPP.py | Prediction with the Fusion Classifier MCMFPP     |
+| estimate.py       | evaluation metrics for prediction                |
+| utils.py          | Some functions that will be used during training |
+| Figures           | figures                                          |
+| MFTP              | dataset                                          |
+| save              | Save model weights and predictions               |
+| T-SNE             | T-SNE visualization                              |
+| Statistical_test  | Contains related statistical tests               |
+| requirements.txt  | Required packages for the environment            |
 
-## Requirements  
+## Requirements
+Please make sure your terminal is functioning properly. 
+
+If you are using PyCharm, you can follow the steps below:
+```
+Open PyCharm and go to the File menu, then select Settings.
+In the settings window, navigate to Tools > Terminal.
+In the Shell path field, specify a shell application, such as cmd.exe.
+Click Apply and OK to save the settings.
+```
+After setting up the terminal in PyCharm, you can simply click the green run button to execute commands.
+
+If you are using cmd, you can manually copy the command and paste it into the cmd window to execute the task.
+
+
 In order to ensure accurate reproducibility of our experiments, it is recommended that you install all the required packages listed in the requirements.txt file with a single command. Run the following in your terminal:
 ```bash
 conda create -n mcmfpp python==3.10.16
 ```
 ```bash
-conda activate mcmfpp
+activate mcmfpp
 ```
 ```bash
 #The installation of CUDA
@@ -47,7 +62,8 @@ Alternatively, you can install each package individually with the specified vers
 pip install esm==3.1.2  
 pip install scikit-learn==1.6.0  
 pip install numpy==1.26.4  
-pip install matplotlib==3.10.0  
+pip install matplotlib==3.10.0
+pip install gradio==3.30.0 
 ```
 ```
 For more information about esm, please visit the website: 
@@ -55,20 +71,37 @@ https://github.com/evolutionaryscale/esm.
 ```
 ## Reproducibility   
 You can obtain the weights for the sub-classifiers SLFE and CFEC models via Baidu Netdisk at the following link:
-[Baidu Netdisk Link](https://pan.baidu.com/s/1U34_TNTdesjibhlrEgIFhw?pwd=JTZ0)  
-提取码: `JTZ0`
+[Baidu Netdisk Link](https://pan.baidu.com/s/1-dMiKYdjLaAlw6vL3qElYQ?pwd=0000)
 
 After downloading and extracting the files, please place the extracted save folder inside the MCMFPP directory.
 
-Change the directory to MCMFPP-main using the cd command, or use the absolute path of MCMFPP-main。
-If you are unable to download the ESMC model from Hugging Face, we have also provided this model in the save folder for local loading. It requires you to load it from your local environment.
-```bash
+Change the directory to MCMFPP-main using the cd command, or use the absolute path of MCMFPP-main.
+```
 cd MCMFPP-main
 ```
+
+If you encounter network restrictions preventing access to the ESMC model on Hugging Face, we provide a mirrored copy via Baidu Netdisk:
+[Baidu Netdisk Link](https://pan.baidu.com/s/1tineNNuJFKgYSWUIxT3l5A?pwd=0000)
+
+Please extract the archive and manually place the resulting folder into the following directory (replace your-username with your actual Windows username):
+```
+C:\Users\your-username\.cache\huggingface\hub\
+```
+Note: This is the default cache directory used by Hugging Face Transformers on Windows systems.
+If the directory does not exist, you can create it manually.
+
 Our experiments are conducted on an NVIDIA GeForce RTX 4060. If your GPU version is different, please directly load the model in the save directory for prediction.
 ```bash
 python predict_MCMFPP.py
 ```
+Plot comparison charts based on the results.
+```bash
+python plot1.py
+```
+```bash
+python plot2.py
+```
+
 If your GPU version is NVIDIA GeForce RTX 4060. To ensure the code runs correctly, please activate the installed mcmfpp environment and navigate to the current directory. Follow the instructions below to train the sub-classifiers (SLFE and CFEC). Once training is complete, their model weights will be automatically saved to the save folder. You can then load the MCMFPP model to perform predictions.
 ```bash
 activate mcmfpp
@@ -91,6 +124,16 @@ python predict_MCMFPP.py
 ### MCMFPP outperforms the state-of-the-art methods  
 ![img.png](Figures/model_evaluation.jpg)
 
+### The statistical test of MCMFPP
+We conducted comparative experiments on both the training set and the test set. The experimental results demonstrate that our proposed method MCMFPP significantly outperforms the existing methods.
+The data and code for the comparative experiments are provided in the Baidu Netdisk link:
+[Baidu Netdisk Link](https://pan.baidu.com/s/1bWClkEWQnd9ieZ3rPUV0Hw?pwd=0000)
+
+After downloading and extracting the archive, please place the folder named "Statistical_test" into the MCMFPP-main directory.
+
+For instructions on reproducing the comparative experiments, please refer to README_Statistical_tests.md.
+
+
 ### Web server
 ```
 The web server for multi-functional peptide prediction is openly accessible at:
@@ -98,3 +141,21 @@ https://huggingface.co/spaces/zzt11w/MCMFPP.
 The web interface is as follows:
 ```
 ![img.png](Figures/web-interface.png)
+
+### Local interface
+We provide a locally runnable package available via Baidu Netdisk: [Baidu Netdisk Link](https://pan.baidu.com/s/15jCo1vb8a7zgz6pE5LiTqg?pwd=0000)
+
+After extraction, please place the folder named Local_interface into the MCMFPP-main directory.
+Then, run the following command to launch the local graphical interface:
+```bash
+activate mcmfpp
+```
+```bash
+cd Local_interface
+```
+```
+pip install gradio
+```
+```
+python interface_prediction_tool.py
+```
