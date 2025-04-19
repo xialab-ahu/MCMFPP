@@ -42,6 +42,8 @@ After setting up the terminal in PyCharm, you can simply click the green run but
 
 If you are using cmd, you can manually copy the command and paste it into the cmd window to execute the task.
 
+You can move or rename it as needed for convenience.
+
 
 In order to ensure accurate reproducibility of our experiments, it is recommended that you install all the required packages listed in the requirements.txt file with a single command. Run the following in your terminal:
 ```bash
@@ -74,11 +76,25 @@ You can obtain the weights for the sub-classifiers SLFE and CFEC models via Baid
 
 After downloading and extracting the files, please place the extracted save folder inside the MCMFPP directory.
 
+Important Note on Extracting Files:Some provided .zip or .rar archives were created by directly compressing folders.
+As a result, after extraction, you may find a nested structure like:
+```
+FolderName/
+└── FolderName/
+    └── (actual contents)
+```
+In such cases, please use the inner folder (the second FolderName) as the working directory.
+
 Change the directory to MCMFPP-main using the cd command, or use the absolute path of MCMFPP-main.
 ```
 cd MCMFPP-main
 ```
 
+
+Our experiments are conducted on an NVIDIA GeForce RTX 4060. If your GPU version is different, please directly load the model in the save directory for prediction.
+```bash
+python predict_MCMFPP.py
+```
 If you encounter network restrictions preventing access to the ESMC model on Hugging Face, we provide a mirrored copy via Baidu Netdisk:
 [Baidu Netdisk Link](https://pan.baidu.com/s/1tineNNuJFKgYSWUIxT3l5A?pwd=0000)
 
@@ -88,11 +104,12 @@ C:\Users\your-username\.cache\huggingface\hub\
 ```
 Note: This is the default cache directory used by Hugging Face Transformers on Windows systems.
 If the directory does not exist, you can create it manually.
+Then re-run the command:
 
-Our experiments are conducted on an NVIDIA GeForce RTX 4060. If your GPU version is different, please directly load the model in the save directory for prediction.
 ```bash
 python predict_MCMFPP.py
 ```
+
 Plot comparison charts based on the results.
 ```bash
 python plot1.py
