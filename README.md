@@ -125,7 +125,7 @@ python plot2.py
 
 If your GPU version is NVIDIA GeForce RTX 4060. To ensure the code runs correctly, please activate the installed mcmfpp environment and navigate to the current directory. Follow the instructions below to train the sub-classifiers (SLFE and CFEC). Once training is complete, their model weights will be automatically saved to the save folder. You can then load the MCMFPP model to perform predictions.
 ```bash
-activate mcmfpp1
+activate mcmfpp
 ```
 ### Training the Sub-classifier SLFE
 ```bash
@@ -148,7 +148,7 @@ python predict_MCMFPP.py
 ### The statistical test of MCMFPP
 We conducted comparative experiments on both the training set and the test set. The experimental results demonstrate that our proposed method MCMFPP significantly outperforms the existing methods.
 The data and code for the comparative experiments are provided in the Baidu Netdisk link:
-[Baidu Netdisk Link](https://pan.baidu.com/s/1bWClkEWQnd9ieZ3rPUV0Hw?pwd=0000)
+[Baidu Netdisk Link](https://pan.baidu.com/s/1dze2jt-xLx1vYCJ7O9i-IA?pwd=0000)
 
 After downloading and extracting the archive, please place the folder named "Statistical_test" into the MCMFPP-main directory.
 
@@ -164,7 +164,7 @@ The web interface is as follows:
 ![img.png](Figures/web-interface.png)
 
 ### Local interface
-We provide a locally runnable package available via Baidu Netdisk: [Baidu Netdisk Link](https://pan.baidu.com/s/15jCo1vb8a7zgz6pE5LiTqg?pwd=0000)
+We provide a locally runnable package available via Baidu Netdisk: [Baidu Netdisk Link](https://pan.baidu.com/s/1tak-CVaVmQDClHijd7IRgA?pwd=0000)
 
 After extraction, please place the folder named Local_interface into the MCMFPP-main directory.
 Then, run the following command to launch the local graphical interface:
