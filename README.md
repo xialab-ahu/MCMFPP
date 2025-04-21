@@ -175,7 +175,7 @@ activate mcmfpp
 cd Local_interface
 ```
 ```
-pip install gradio
+pip install gradio -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 ```
 python interface_prediction_tool.py
