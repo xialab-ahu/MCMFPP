@@ -53,18 +53,23 @@ conda create -n mcmfpp python==3.10.16
 activate mcmfpp
 ```
 ```bash
-#The installation of CUDA
 pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu124
 ```
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 Alternatively, you can install each package individually with the specified versions by running the following commands:
 ```bash
-pip install esm==3.1.2  
-pip install scikit-learn==1.6.0  
-pip install numpy==1.26.4  
-pip install matplotlib==3.10.0
+pip install esm==3.1.2 -i https://pypi.tuna.tsinghua.edu.cn/simple  
+```
+```bash
+pip install scikit-learn==1.6.0 -i https://pypi.tuna.tsinghua.edu.cn/simple  
+```
+```bash
+pip install numpy==1.26.4 -i https://pypi.tuna.tsinghua.edu.cn/simple  
+```
+```bash
+pip install matplotlib==3.10.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 ```
 For more information about esm, please visit the website: 
@@ -120,7 +125,7 @@ python plot2.py
 
 If your GPU version is NVIDIA GeForce RTX 4060. To ensure the code runs correctly, please activate the installed mcmfpp environment and navigate to the current directory. Follow the instructions below to train the sub-classifiers (SLFE and CFEC). Once training is complete, their model weights will be automatically saved to the save folder. You can then load the MCMFPP model to perform predictions.
 ```bash
-activate mcmfpp
+activate mcmfpp1
 ```
 ### Training the Sub-classifier SLFE
 ```bash
