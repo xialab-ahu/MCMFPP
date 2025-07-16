@@ -81,7 +81,7 @@ Our experiments are conducted on an NVIDIA GeForce RTX 4060. If your GPU version
 python predict_MCMFPP.py
 ```
 If you encounter network restrictions preventing access to the ESMC model on Hugging Face, we provide a mirrored copy via Baidu Netdisk:
-[Baidu Netdisk Link](https://pan.baidu.com/s/1tineNNuJFKgYSWUIxT3l5A?pwd=0000)
+[Baidu Netdisk Link](https://pan.baidu.com/s/1tineNNuJFKgYSWUIxT3l5A?pwd=0000).
 
 Please extract the archive and manually place the resulting folder into the following directory (replace your-username with your actual Windows username):
 ```
@@ -128,7 +128,7 @@ python predict_MCMFPP.py
 ### The statistical test of MCMFPP
 We conducted comparative experiments on both the training set and the test set. The experimental results demonstrate that our proposed method MCMFPP significantly outperforms the existing methods.
 The data and code for the comparative experiments are provided in the Baidu Netdisk link:
-[Baidu Netdisk Link](https://pan.baidu.com/s/1dze2jt-xLx1vYCJ7O9i-IA?pwd=0000)
+[Baidu Netdisk Link](https://pan.baidu.com/s/1dze2jt-xLx1vYCJ7O9i-IA?pwd=0000).
 
 After downloading and extracting the archive, please place the folder named "Statistical_test" into the MCMFPP-main directory.
 
