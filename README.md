@@ -157,4 +157,4 @@ For instructions on reproducing the comparative experiments, please refer to REA
 
 ### Web server
 The web server for multi-functional peptide prediction is openly accessible at:
-[MCMFPP Web Server](https://huggingface.co/spaces/zzt11w/MCMFPP).
+[MCMFPP Web Server](https://modelscope.cn/studios/zztzjt/mcmfpp-web).
