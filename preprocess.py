@@ -39,7 +39,6 @@ def process_batch(model1, batch,max_length):
         padding_needed = max_length - current_length
         if padding_needed > 0:
             batch_input_ids = F.pad(batch_input_ids, (0, padding_needed), value=0)
-            # batch_input_ids = F.pad(batch_input_ids, (0, padding_needed), value=1)
         batch_esm_output = model1(batch_input_ids)
         batch_embeddings = batch_esm_output.embeddings
     return batch_embeddings
