@@ -1,9 +1,11 @@
 from torch.utils.data import Dataset, DataLoader
 import torch.nn.functional as F
 from esm.models.esmc import ESMC
-from models import CFEC
+from esm.tokenization import get_esmc_model_tokenizers
+from models import *
 from utils import *
 amino_acids = "XACDEFGHIKLMNPQRSTVWY"
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 def loadtxt(file_path):
     with open(file_path, "r") as file:
         lines = file.readlines()
@@ -79,8 +81,8 @@ def get_slfe_input(args):
         test_seq_embeddings = [0] * len(test_sample)
     if args.ESMC_embedding_dim != 0:
         print("Loading the large model ESMC...")
-        model1 = ESMC.from_pretrained("esmc_300m")
-        # model1=  torch.load("save1/esmc_300m.pth")
+        # model1 = ESMC.from_pretrained("esmc_300m")
+        model1=model_ESMC
         print("The large model ESMC has been loaded successfully.")
         # Process training data
         train_embeddings_slfe = []
@@ -133,8 +135,8 @@ def get_cfec_input(args):
         test_seq_embeddings = [0] * len(test_sample)
     if args.ESMC_embedding_dim != 0:
         print("Loading the large model ESMC...")
-        model1 = ESMC.from_pretrained("esmc_300m")
-        # model1=  torch.load("save1/esmc_300m.pth")
+        # model1 = ESMC.from_pretrained("esmc_300m")
+        model1=model_ESMC
         print("The large model ESMC has been loaded successfully.")
         # Process training data
         train_embeddings_cfec = []

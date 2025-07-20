@@ -3,7 +3,7 @@ import math
 import numpy as np
 import torch
 import torch.nn as nn
-from esm.models.esmc import ESMC
+from models import *
 import torch.nn.functional as F
 from matplotlib import pyplot as plt
 from scipy.spatial import distance
@@ -93,7 +93,7 @@ if __name__ == "__main__":
     test_sample, test_label = loadtxt_test(args.test_direction)
     test_labels = torch.tensor(test_label, dtype=torch.float32)
     test_seq_embeddings = seq_to_embed(test_sample, amino_acids, args.max_length)
-    model0 = ESMC.from_pretrained("esmc_300m")
+    model0 = model_ESMC
     test_embeddings = []
     for i in range(0, len(test_sample), args.batch_size):
         batch = test_sample[i:i + args.batch_size]

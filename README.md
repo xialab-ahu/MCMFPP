@@ -50,26 +50,15 @@ cd MCMFPP
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-
 ```
 For more information about esm, please visit the website: 
 https://github.com/evolutionaryscale/esm.
 ```
 ## Reproducibility   
 Our experiments are conducted on an NVIDIA GeForce RTX 4060. If your GPU version is different, please directly load the model in the save directory for prediction.
-```bash
-python predict_MCMFPP.py
-```
-If you encounter network restrictions preventing access to the ESMC model on Hugging Face, we provide a mirrored copy via Baidu Netdisk:
-[Baidu Netdisk Link](https://pan.baidu.com/s/1tineNNuJFKgYSWUIxT3l5A?pwd=0000).
 
-Please extract the archive and manually place the resulting folder into the following directory (replace your-username with your actual Windows username):
-```
-C:\Users\your-username\.cache\huggingface\hub\
-```
-Note: This is the default cache directory used by Hugging Face Transformers on Windows systems.
-If the directory does not exist, you can create it manually.
-Then re-run the command:
+Please download the pre-trained weights of the ESMC model and save them in the "save" folder:
+[Baidu Netdisk Link](https://pan.baidu.com/s/1CUSiMjQ-zN593oUsck-D7w?pwd=0000).
 
 ```bash
 python predict_MCMFPP.py

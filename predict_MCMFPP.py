@@ -44,8 +44,8 @@ classifier_SLFE=torch.load('save/classifier_slfe.pth')
 classifier_CFEC=torch.load('save/classifier_cfec.pth')
 _,test_loader=get_slfe_input(args)
 preds,reals=mcmfpp.predict(classifier_SLFE,classifier_CFEC,test_loader)
-# np.savetxt('save/mcmfpp_preds.csv', preds, delimiter=',')
-# np.savetxt('save/reals.csv', reals, delimiter=',')
+np.savetxt('save/mcmfpp_preds.csv', preds, delimiter=',')
+np.savetxt('save/reals.csv', reals, delimiter=',')
 
 label_combination_indices = {}
 for i, label in enumerate(reals):
