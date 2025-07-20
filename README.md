@@ -86,14 +86,12 @@ python predict_MCMFPP.py
 ![img.png](Figures/model_evaluation.jpg)
 
 ### The statistical test of MCMFPP
+```
 We conducted comparative experiments on both the training set and the test set. The experimental results demonstrate that our proposed method MCMFPP significantly outperforms the existing methods.
-The data and code for the comparative experiments are provided in the Baidu Netdisk link:
-[Baidu Netdisk Link](https://pan.baidu.com/s/1dze2jt-xLx1vYCJ7O9i-IA?pwd=0000).
-
-After downloading and extracting the archive, please place the folder named "Statistical_test" into the MCMFPP-main directory.
-
-For instructions on reproducing the comparative experiments, please refer to README_Statistical_tests.md.
-
+```
+```
+For instructions on reproducing the comparative experiments, please refer to: Statistical_test\README_Statistical_tests.md.
+```
 
 ### Web server
 The web server for multi-functional peptide prediction is openly accessible at:
