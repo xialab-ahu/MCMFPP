@@ -29,22 +29,6 @@ The supervised contrastive learning (SCL)  framework for knowledge distillation 
 | requirements.txt  | Required packages for the environment            |
 
 ## Requirements
-Please make sure your terminal is functioning properly. 
-
-If you are using PyCharm, you can follow the steps below:
-```
-Open PyCharm and go to the File menu, then select Settings.
-In the settings window, navigate to Tools > Terminal.
-In the Shell path field, specify a shell application, such as cmd.exe.
-Click Apply and OK to save the settings.
-```
-After setting up the terminal in PyCharm, you can simply click the green run button to execute commands.
-
-If you are using cmd, you can manually copy the command and paste it into the cmd window to execute the task.
-
-You can move or rename it as needed for convenience.
-
-
 In order to ensure accurate reproducibility of our experiments, it is recommended that you install all the required packages listed in the requirements.txt file with a single command. Run the following in your terminal:
 ```bash
 conda create -n mcmfpp python==3.10.16
@@ -55,22 +39,18 @@ activate mcmfpp
 ```bash
 pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu124
 ```
+Please clone the code of MCMFPP.
+```bash
+git clone https://github.com/zhao-project/MCMFPP.git
+```
+```bash
+cd MCMFPP
+```
 ```bash
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
-Alternatively, you can install each package individually with the specified versions by running the following commands:
-```bash
-pip install esm==3.1.2 -i https://pypi.tuna.tsinghua.edu.cn/simple  
-```
-```bash
-pip install scikit-learn==1.6.0 -i https://pypi.tuna.tsinghua.edu.cn/simple  
-```
-```bash
-pip install numpy==1.26.4 -i https://pypi.tuna.tsinghua.edu.cn/simple  
-```
-```bash
-pip install matplotlib==3.10.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
-```
+
+
 ```
 For more information about esm, please visit the website: 
 https://github.com/evolutionaryscale/esm.
