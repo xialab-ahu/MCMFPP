@@ -57,7 +57,7 @@ https://github.com/evolutionaryscale/esm.
 ## Reproducibility   
 Our experiments are conducted on an NVIDIA GeForce RTX 4060. If your GPU version is different, please directly load the model in the save directory for prediction.
 
-Please download the pre-trained weights of the ESMC model and save them in the "save" folder:
+Please download the pre-trained weights of the ESMC model and save it in the "save" folder:
 [Baidu Netdisk Link](https://pan.baidu.com/s/1CUSiMjQ-zN593oUsck-D7w?pwd=0000).
 ```bash
 activate mcmfpp
