@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea4885e0-7cbd-4c89-8142-e0df05630df9" name="Changes" comment="" />
+    <list default="true" id="ea4885e0-7cbd-4c89-8142-e0df05630df9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -27,6 +32,7 @@
     "Python.train_cfec.executor": "Run",
     "Python.train_slfe.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/zzt/Desktop/论文投稿7月16日/MCMFPP-main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -61,6 +67,7 @@
       <updated>1752651570524</updated>
       <workItem from="1752651571775" duration="16795000" />
       <workItem from="1752673287619" duration="523000" />
+      <workItem from="1753003245204" duration="1805000" />
     </task>
     <servers />
   </component>
