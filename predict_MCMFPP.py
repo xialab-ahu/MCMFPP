@@ -96,6 +96,9 @@ print(f'accuracy: {score[2]:.3f}')
 print(f'absolute_true: {score[3]:.3f}')
 print(f'absolute_false: {score[4]:.3f}\n')
 
+from plot1 import *
+from plot2 import *
+#Plot comparison charts based on the results.
 
 # The functional prediction results of MCMFPP
 test_sample, _ = loadtxt(args.test_direction)

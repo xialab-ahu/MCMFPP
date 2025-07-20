@@ -208,7 +208,7 @@ with torch.device(device):
         tokenizer=get_esmc_model_tokenizers(),
         use_flash_attn=True,
     ).eval()
-    state_dict = torch.load("save/esmc_300m_2024_12_v0.pth", map_location=device, )
+    state_dict = torch.load("../save/esmc_300m_2024_12_v0.pth", map_location=device, )
 model_ESMC.load_state_dict(state_dict)
 if device.type != "cpu":
     model_ESMC = model_ESMC.to(torch.bfloat16)

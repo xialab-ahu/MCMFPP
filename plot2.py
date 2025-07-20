@@ -182,6 +182,7 @@ precision_micro_etfc = tp_sum_etfc / (tp_sum_etfc + fp_sum_etfc) if (tp_sum_etfc
 recall_micro_etfc = tp_sum_etfc / (tp_sum_etfc + fn_sum_etfc) if (tp_sum_etfc + fn_sum_etfc) > 0 else 0
 micro_f1_etfc = 2 * precision_micro_etfc * recall_micro_etfc / (precision_micro_etfc + recall_micro_etfc) if (precision_micro_etfc + recall_micro_etfc) > 0 else 0
 
+print("Model comparison under macro F1 and micro F1 scores")
 print("PSCFA Macro-F1:", macro_f1_pscfa)
 print("PSCFA Micro-F1:", micro_f1_pscfa)
 print("MCMFPP Macro-F1:", macro_f1_mcmfpp)

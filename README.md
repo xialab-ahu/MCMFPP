@@ -59,23 +59,14 @@ Our experiments are conducted on an NVIDIA GeForce RTX 4060. If your GPU version
 
 Please download the pre-trained weights of the ESMC model and save them in the "save" folder:
 [Baidu Netdisk Link](https://pan.baidu.com/s/1CUSiMjQ-zN593oUsck-D7w?pwd=0000).
-
+```bash
+activate mcmfpp
+```
 ```bash
 python predict_MCMFPP.py
 ```
 
-Plot comparison charts based on the results.
-```bash
-python plot1.py
-```
-```bash
-python plot2.py
-```
-
 If your GPU version is NVIDIA GeForce RTX 4060. To ensure the code runs correctly, please activate the installed mcmfpp environment and navigate to the current directory. Follow the instructions below to train the sub-classifiers (SLFE and CFEC). Once training is complete, their model weights will be automatically saved to the save folder. You can then load the MCMFPP model to perform predictions.
-```bash
-activate mcmfpp
-```
 ### Training the Sub-classifier SLFE
 ```bash
 python train_slfe.py
